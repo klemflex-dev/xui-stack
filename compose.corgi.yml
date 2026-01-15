@@ -1,5 +1,5 @@
 services:
   web:
     volumes:
-        - ./angie_config/corgi.conf:/etc/angie/http.d
+        - ./angie_config/corgi.conf:/etc/angie/http.d/corgi.conf
         - ./html_corgi/:/usr/share/angie/html

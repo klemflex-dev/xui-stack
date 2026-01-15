@@ -1,5 +1,5 @@
 services:
   web:
     volumes:
-        - ./angie_config/panda.conf:/etc/angie/http.d
+        - ./angie_config/panda.conf:/etc/angie/http.d/panda.conf
         - ./html_panda/:/usr/share/angie/html
