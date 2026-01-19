@@ -9,6 +9,7 @@ services:
     networks:
       - frontend
     volumes:
+      - ./angie.conf:/etc/angie/http.d/angie.conf
       - ./certificates:/var/lib/angie/acme/example/
     restart: unless-stopped
   x-ui:
@@ -20,6 +21,8 @@ services:
     environment:
       XRAY_VMESS_AEAD_FORCED: "false"
       XUI_ENABLE_FAIL2BAN: "true"
+    env_file:
+      - .env
     tty: true
     network_mode: host
     restart: unless-stopped
