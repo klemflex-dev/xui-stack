@@ -11,6 +11,8 @@ services:
     volumes:
       - ./angie.conf:/etc/angie/http.d/angie.conf
       - ./certificates:/var/lib/angie/acme/example/
+    env_file:
+      - .env
     restart: unless-stopped
   x-ui:
     image: askeladq/x-ui:3x-ui
